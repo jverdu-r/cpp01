@@ -1,0 +1,27 @@
+- Para comprobar si los zombies estan en el Stack o en el Heap añadir:
+
+void    *bottom_heap;
+void    bottomheap_init( void )
+{
+    bottom_heap = std::malloc(sizeof(int));
+}
+void    heap_stack(void *p)
+{
+    int bottom_stack;
+    if (p > &bottom_stack || p < bottom_heap)
+        std::cout << "Stack memory\n";
+    else
+       std::cout << "Heap memory\n";
+}
+
+y estas lineas en el main:
+
+bottomheap_init() - en el inicio del main
+heap_stack(zombie_1) despues de que el zombie_1 se anuncie
+
+y esta dentro de randomChump() :
+
+heap_stack(zombie2);
+
+por ultimo añadir heap_stack() al header.
+
