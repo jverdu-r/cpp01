@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jverdu-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 16:41:27 by jverdu-r          #+#    #+#             */
-/*   Updated: 2024/01/09 16:41:28 by jverdu-r         ###   ########.fr       */
+/*   Created: 2024/01/09 16:42:41 by jverdu-r          #+#    #+#             */
+/*   Updated: 2024/01/09 16:42:42 by jverdu-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,26 @@ void Harl::complain(std::string lvl)
 
     while (i < 4 && st[i].compare(lvl) != 0)
         i++;
-    if (i > 3)
+    switch (i)
+    {
+    case 0:
+        std::cout << "[debug]" << std::endl;
+        (this->*p[0])();
+        std::cout << std::endl;
+    case 1:
+        std::cout << "[info]" << std::endl;
+        (this->*p[1])();
+        std::cout << std::endl;
+    case 2:
+        std::cout << "[warning]" << std::endl;
+        (this->*p[2])();
+        std::cout << std::endl;
+    case 3:
+        std::cout << "[error]" << std::endl;
+        (this->*p[3])();
+        break;
+    default:
         std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
-    else
-        (this->*p[i])();
+        break;
+    }
 }

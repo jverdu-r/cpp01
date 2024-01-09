@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jverdu-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 16:41:31 by jverdu-r          #+#    #+#             */
-/*   Updated: 2024/01/09 16:41:34 by jverdu-r         ###   ########.fr       */
+/*   Created: 2024/01/09 16:42:46 by jverdu-r          #+#    #+#             */
+/*   Updated: 2024/01/09 16:42:47 by jverdu-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,11 @@ int main(int argc, char **argv)
 {
     Harl harl;
 
-    for (int i = 1; i < argc; i++)
+    if (argc > 2)
     {
-        harl.complain(argv[i]);
-        std::cout << std::endl;
+        std::cerr << "ERROR: too many arguments." << std::endl;
+        return (1);
     }
+    harl.complain(argv[1]);
     return (0);
 }

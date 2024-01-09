@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jverdu-r <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/09 16:41:46 by jverdu-r          #+#    #+#              #
-#    Updated: 2024/01/09 16:41:48 by jverdu-r         ###   ########.fr        #
+#    Created: 2024/01/09 16:42:54 by jverdu-r          #+#    #+#              #
+#    Updated: 2024/01/09 16:42:55 by jverdu-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CXXFLAGS = -std=c++98 -Wall -Werror -Wextra
 SRC = src/main.cpp \
 	  src/harl.cpp
 
-TARGET = Harl
+TARGET = Harl_Filter
 
 all: $(TARGET)
 
