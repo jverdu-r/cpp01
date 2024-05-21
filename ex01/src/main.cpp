@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jverdu-r <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jverdu-r <jverdu-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 12:11:29 by jverdu-r          #+#    #+#             */
-/*   Updated: 2023/12/26 12:11:31 by jverdu-r         ###   ########.fr       */
+/*   Updated: 2024/05/21 17:48:21 by jverdu-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ int main(void)
         zombies[i].announce();
         std::cout << std::endl;
     }
+    delete[] zombies;
     return (0);
 }

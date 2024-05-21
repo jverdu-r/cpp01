@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jverdu-r <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: jverdu-r <jverdu-r@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/26 12:29:58 by jverdu-r          #+#    #+#              #
-#    Updated: 2023/12/26 12:30:00 by jverdu-r         ###   ########.fr        #
+#    Updated: 2024/05/21 17:49:39 by jverdu-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CXX = g++
+CXX = c++
 
-CXXFLAGS = -std=c++98 -Wall -Werror -Werror
+CXXFLAGS = -std=c++98 -Wall -Werror -Werror -Wextra -fsanitize=address -g3
 
 TARGET = More_BraiiiiiiinnnzzzZ
 
