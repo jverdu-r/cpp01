@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jverdu-r <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jverdu-r <jverdu-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 19:11:05 by jverdu-r          #+#    #+#             */
-/*   Updated: 2023/12/19 19:11:08 by jverdu-r         ###   ########.fr       */
+/*   Updated: 2024/10/30 10:34:53 by jverdu-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@ Zombie::~Zombie(void)
 Zombie::Zombie(std::string newName)
 {
     this->name = newName;
+}
+
+Zombie& Zombie::operator=(Zombie const& origin)
+{
+    this->name = origin.name;
+    return (*this);
 }
 
 void    Zombie::announce(void) const

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jverdu-r <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jverdu-r <jverdu-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 16:41:14 by jverdu-r          #+#    #+#             */
-/*   Updated: 2024/01/09 16:41:16 by jverdu-r         ###   ########.fr       */
+/*   Updated: 2024/10/30 10:41:15 by jverdu-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Harl
     public:
         Harl(void);
         ~Harl(void);
+        Harl &operator=(Harl const &harl);
         void complain(std::string lvl);
 };
 

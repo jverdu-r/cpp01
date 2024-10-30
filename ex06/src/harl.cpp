@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jverdu-r <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jverdu-r <jverdu-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 16:42:41 by jverdu-r          #+#    #+#             */
-/*   Updated: 2024/01/09 16:42:42 by jverdu-r         ###   ########.fr       */
+/*   Updated: 2024/10/30 11:10:47 by jverdu-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 
 Harl::Harl(void){return;}
 Harl::~Harl(void){return;}
+
+Harl& Harl::operator=(Harl const& origin)
+{
+    static_cast<void>(origin);
+    return (*this);
+}
 
 void Harl::debug(void)
 {

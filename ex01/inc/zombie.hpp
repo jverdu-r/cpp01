@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jverdu-r <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jverdu-r <jverdu-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 19:10:58 by jverdu-r          #+#    #+#             */
-/*   Updated: 2023/12/19 19:11:00 by jverdu-r         ###   ########.fr       */
+/*   Updated: 2024/10/30 10:34:32 by jverdu-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class Zombie
         ~Zombie(void);
 
         Zombie(std::string newName);
+
+        Zombie &operator=(Zombie const &zombie);
 
         void announce(void) const;
         void setName(std::string name);

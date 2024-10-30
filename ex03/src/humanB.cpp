@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   humanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jverdu-r <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jverdu-r <jverdu-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 15:37:34 by jverdu-r          #+#    #+#             */
-/*   Updated: 2023/12/26 15:37:40 by jverdu-r         ###   ########.fr       */
+/*   Updated: 2024/10/30 10:38:49 by jverdu-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@ HumanB::HumanB(std::string name)
 {
     this->name = name;
     this->weapon = NULL;
+}
+HumanB& HumanB::operator=(HumanB const& origin)
+{
+    this->weapon = origin.weapon;
+    this->name = origin.name;
+    return (*this);
 }
 
 void HumanB::setWeapon(Weapon &weapon)
